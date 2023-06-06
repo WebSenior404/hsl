@@ -1,0 +1,2101 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;600;700&display=swap');
+@import "../scss/sections/var";
+@import "../scss/sections/mixin";
+@import "../scss/sections/base";
+
+
+.header {
+    width: 100%;
+    background: linear-gradient(140deg, (black), transparent 150%), url(../img/truckl.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    .container {
+
+        .nav {
+            margin: 20px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-logo {
+                width: 165px;
+                height: 41px;
+            }
+
+            &-menu {
+                height: 20px;
+
+                &__items {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 45px;
+
+                    a {
+                        @include font(14, 22, 500, $wh-color);
+                    }
+                }
+            }
+
+            &-contact {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 60px;
+
+                .aloqa {
+                    border: 1px solid $pr-color;
+                    background: transparent;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+
+                    a {
+                        color: $wh-color;
+                    }
+
+                    &:hover {
+                        background: $pr-color;
+
+                        a {
+                            color: $bl-color;
+                        }
+                    }
+                }
+
+                .tel {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    height: 50px;
+
+                    &:hover {
+                        .phone {
+                            transform: scale(1.1);
+
+                            svg {
+
+                                fill: $pr-color;
+
+                                path {
+                                    border: none;
+                                    fill: $bl-color;
+                                }
+                            }
+                        }
+
+                        .number {
+                            height: 25px;
+                            @include font(20, 20, 600, $pr-color);
+                            transform: scale(1.05);
+                            text-decoration: none;
+                            transition: 0.1s ease-in-out;
+                        }
+
+                    }
+
+                    .number {
+                        height: 25px;
+                        @include font(20, 20, 600, $wh-color);
+                    }
+
+                }
+            }
+        }
+
+        .banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 150px;
+
+            &-title {
+                width: 740px;
+                text-align: left;
+
+                p {
+                    letter-spacing: -0.125em;
+                    @include font(136, 136, 700, rgba(255, 255, 255, 0));
+                    -webkit-text-stroke: 2px $pr-color;
+
+                    span {
+                        padding: 0;
+                        margin: 0;
+                        animation: animates 4.75s linear infinite;
+
+                        &:nth-child(1) {
+                            animation-delay: 0s;
+                        }
+
+                        &:nth-child(2) {
+                            animation-delay: 0.25s;
+                        }
+
+                        &:nth-child(3) {
+                            animation-delay: 0.5s;
+                        }
+
+                        &:nth-child(4) {
+                            animation-delay: 0.75s;
+                        }
+
+                        &:nth-child(5) {
+                            animation-delay: 1s;
+                        }
+
+                        &:nth-child(6) {
+                            animation-delay: 1.25s;
+                        }
+
+                        &:nth-child(7) {
+                            animation-delay: 1.5s;
+                        }
+
+                        &:nth-child(8) {
+                            animation-delay: 1.75s;
+                        }
+
+                        &:nth-child(9) {
+                            animation-delay: 2s;
+                        }
+
+                        &:nth-child(10) {
+                            animation-delay: 2.5s;
+                        }
+
+                        &:nth-child(11) {
+                            animation-delay: 2.25s;
+                        }
+
+                        &:nth-child(12) {
+                            animation-delay: 2s;
+                        }
+
+                        &:nth-child(13) {
+                            animation-delay: 1.75s;
+                        }
+
+                        &:nth-child(14) {
+                            animation-delay: 1.5s;
+                        }
+
+                        &:nth-child(15) {
+                            animation-delay: 1.25s;
+                        }
+
+                        &:nth-child(16) {
+                            animation-delay: 1s;
+                        }
+
+                        &:nth-child(17) {
+                            animation-delay: 0.75s;
+                        }
+
+                        &:nth-child(18) {
+                            animation-delay: 0.25s;
+                        }
+
+                        &:nth-child(19) {
+                            animation-delay: 0s;
+                        }
+                    }
+                }
+            }
+
+            @keyframes animates {
+
+                0%,
+                100% {
+                    color: $pr-color;
+                    filter: blur(2px);
+                    text-shadow: 0 0 10px $pr-color,
+                        0 0 30px $pr-color,
+                        0 0 40px $pr-color,
+                        0 0 80px $pr-color,
+                        0 0 120px $pr-color,
+                        0 0 200px $pr-color,
+                        0 0 300px $pr-color,
+                        0 0 400px $pr-color;
+                }
+
+                5%,
+                95% {
+                    text-shadow: none;
+                    filter: blur(0px);
+                    color: rgba(255, 255, 255, 0);
+                    -webkit-text-stroke: 2px $pr-color;
+                }
+            }
+
+            &-btn {
+                margin-top: 60px;
+            }
+
+            &-info {
+                margin-top: 22px;
+                @include font(20, 32, 400, $wh-color);
+
+                span {
+                    @include font(22, 32, 500, $pr-color);
+                }
+            }
+
+        }
+    }
+
+}
+
+.mobileNav {
+    display: none;
+}
+
+.Biz-bilan-aloqa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    transform: translateY(-1000px);
+    overflow: hidden;
+
+    .cancelAloqa {
+        display: flex;
+        justify-content: flex-end;
+        padding: 40px;
+
+        svg {
+            fill: $wh-color;
+
+        }
+
+        &:hover {
+            svg {
+                fill: $pr-color;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .card {
+        width: 500px;
+        height: 600px;
+        background-color: $bl-color;
+        margin: 40px auto;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            width: 500px;
+            height: 600px;
+            left: -50%;
+            background-color: $pr-color;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            width: 500px;
+            height: 600px;
+            left: -50%;
+            background-color: $pr-color;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -3s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .forma {
+            position: absolute;
+            inset: 2px;
+            border-radius: 20px;
+            z-index: 10;
+            background: #28292d;
+            padding: 20px;
+
+            .title {
+                display: flex;
+                justify-content: center;
+                @include font(30, 32, 400, $pr-color);
+            }
+
+            .card-banner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .form {
+                    margin-top: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 20px;
+
+                    label {
+                        @include font(18, 32, 400, $pr-color);
+                    }
+
+                    input {
+                        background: transparent;
+                        width: 300px;
+                        height: 40px;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid;
+                        @include font(20, 32, 400, $wh-color);
+                    }
+                }
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.about-company {
+    background: linear-gradient(140deg, (black), transparent 80%), url(../img/fura.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 50px;
+
+    .container {
+        .about-info {
+            .page-name {
+                @include font(18, 21, 900, $pr-color);
+                padding-top: 50px;
+
+            }
+
+            .title {
+                width: 980px;
+                margin-top: 30px;
+                @include font(64, 75, 700, $wh-color);
+
+                span {
+                    @include font(120, 75, 900, rgba(255, 255, 255, 0));
+                    text-transform: uppercase;
+                    -webkit-text-stroke: 1px $pr-color;
+                    background-image: url(../img/back.png);
+                    background-clip: text;
+                    background-position: 0 0;
+                    animation: back 15s linear infinite;
+                }
+
+                @keyframes back {
+                    100% {
+                        background-position: 2000px 0;
+                    }
+                }
+            }
+
+            .info {
+                p {
+                    width: 650px;
+                    margin-top: 40px;
+                    @include font(16, 28, 400, $wh-color);
+                    opacity: 0.8;
+                }
+            }
+
+            .footer {
+                display: flex;
+                gap: 100px;
+                margin-top: 80px;
+                background: transparent;
+
+                .person {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    &-info {
+                        .name {
+                            @include font(16, 28, 700, $wh-color);
+                        }
+
+                        .name-info {
+                            @include font(14, 25, 400, $wh-color);
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hizmatlarimiz {
+    background: linear-gradient(140deg, (black), transparent 50%), url(../img/hizmatlarimiz\ bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 100px;
+
+    .container {
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .next-prew {
+                position: relative;
+                right: 5%;
+
+                .swiper-button-next {
+                    position: absolute;
+                    right: 0;
+                    left: 0px;
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid $wh-color;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        border: 1px solid $pr-color;
+                        background-color: $pr-color;
+
+                        svg {
+                            path {
+                                fill: black;
+                            }
+                        }
+
+                        &::after {
+                            color: $pr-color;
+                        }
+                    }
+                }
+
+                .swiper-button-prev {
+                    position: absolute;
+                    left: -60px;
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid $wh-color;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        border: 1px solid $pr-color;
+                        background-color: $pr-color;
+
+                        svg {
+                            path {
+                                fill: black;
+                            }
+                        }
+
+                        &::after {
+                            color: $pr-color;
+                        }
+                    }
+                }
+
+                .swiper-button-next::after {
+                    content: "";
+
+                }
+
+                .swiper-button-prev::after {
+                    content: "";
+
+                }
+            }
+        }
+
+        .title {
+            padding-top: 40px;
+            @include font(64, 75, 700, $wh-color);
+            background: #1FCF25;
+            background: radial-gradient(circle farthest-corner at center center, #1FCF25 0%, #3C5ECF 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+
+    .swiper.hizmatlarimiz {
+        padding: 40px 0;
+        background: transparent;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                background: linear-gradient(140deg, (black), transparent 150%);
+                border-radius: 20px;
+                overflow: hidden;
+
+                button {
+                    padding-left: 30px;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                .swiper-info {
+                    padding: 30px;
+                    @include font(14, 22, 400, $wh-color);
+                    opacity: 0.8;
+                }
+
+                .swiper-title {
+                    padding: 30px;
+                    @include font(28, 32, 700, $wh-color);
+                }
+
+            }
+        }
+
+        .swiper-pagination-bullet {
+            background-color: $pr-color;
+            width: 10px;
+            height: 10px;
+        }
+
+    }
+}
+
+.flags {
+    @function multiple-box-shadow ($n) {
+        $value: '#{random(2000)}px #{random(2000)}px #FFF';
+
+        @for $i from 2 through $n {
+            $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+        }
+
+        @return unquote($value);
+    }
+
+    $shadows-small: multiple-box-shadow(700);
+    $shadows-medium: multiple-box-shadow(200);
+    $shadows-big: multiple-box-shadow(100);
+
+
+    background-color: black;
+
+    #stars {
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $shadows-small;
+        animation: animStar 50s linear infinite;
+
+
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 2000px;
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            box-shadow: $shadows-small;
+        }
+    }
+
+    #stars2 {
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $shadows-medium;
+        animation: animStar 100s linear infinite;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 2000px;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow: $shadows-medium;
+        }
+    }
+
+    #stars3 {
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: $shadows-big;
+        animation: animStar 150s linear infinite;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 2000px;
+            width: 3px;
+            height: 3px;
+            background: transparent;
+            box-shadow: $shadows-big;
+        }
+    }
+
+    @keyframes animStar {
+        from {
+            transform: translateY(0px);
+        }
+
+        to {
+            transform: translateY(-2000px);
+        }
+
+    }
+
+    .container {
+        .title {
+            padding: 20px 0;
+            @include font(64, 75, 600, $wh-color);
+            background: #1FCF25;
+            background: radial-gradient(circle farthest-corner at center center, #1FCF25 0%, #3C5ECF 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -3%;
+        }
+
+        .cards {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 60px;
+
+            .card {
+                width: 152px;
+                height: 104px;
+                border-radius: 10px;
+
+                p {
+                    margin-top: 5px;
+                    @include font(18, 23, 400, $wh-color);
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+        }
+    }
+}
+
+.fotogalareya {
+    .container {
+        gap: 10px;
+
+        .title {
+            p {
+                @include font(64, 75, 600, $bl-color);
+            }
+        }
+
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.yolkira {
+    background: url(../img/yolkira\ bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 130px;
+
+    .container {
+        .title {
+            @include font(64, 75, 600, $wh-color);
+        }
+
+        .info {
+            @include font(18, 28, 400, $wh-color);
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .login-box {
+            padding: 40px;
+            background: rgba(0, 0, 0, .5);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+            border-radius: 10px;
+            display: flex;
+
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 30px;
+                flex-wrap: wrap;
+
+                button {
+                    a {
+                        width: 435px;
+                        height: 70px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+        .login-box h2 {
+            margin: 0 0 30px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .login-box .user-box {
+            width: 435px;
+            height: 70px;
+            position: relative;
+        }
+
+        .login-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+
+        .login-box .user-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .login-box .user-box input:focus~label,
+        .login-box .user-box input:valid~label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 12px;
+        }
+    }
+}
+
+.footer {
+    background: black;
+    width: 100%;
+
+    .container {
+        .logo {
+            margin-top: 60px;
+        }
+
+        .center {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+
+            .cards {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                .cardd {
+                    display: flex;
+                    gap: 20px;
+
+                    img {
+                        width: 46px;
+                        height: 46px;
+                    }
+
+                    .info {
+                        .title {
+                            p {
+                                @include font(16, 24, 600, $wh-color);
+                            }
+                        }
+
+                        .info-text {
+                            p {
+                                @include font(14, 21, 400, $wh-color);
+                                opacity: 0.9;
+                            }
+                        }
+                    }
+                }
+            }
+
+            iframe {
+                border-radius: 5%;
+            }
+        }
+    }
+
+    .end {
+        width: 100%;
+        padding-top: 20px;
+        margin-top: 50px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .left {
+                p {
+                    @include font(14, 14, 400, $wh-color);
+                    opacity: 0.8;
+                }
+            }
+
+            .right {
+
+                #apple,
+                #twitter,
+                #telegram,
+                #facebook {
+                    font-size: 2em;
+                    background-color: #18191f;
+                    color: #fff;
+                    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+                        2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
+                        inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+                        inset 2px 2px 10px #00000080;
+                    border-radius: 29px;
+                    padding: 0px 19px;
+                    animation: animate-icon 3s linear infinite;
+                    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+                        0 0 200px #0072ff;
+                }
+
+                #twitter {
+                    animation-delay: 0.3s;
+                }
+
+                #facebook {
+                    animation-delay: 0.7s;
+                }
+
+                #telegram {
+                    animation-delay: 0.1s;
+                }
+
+                @keyframes animate-icon {
+                    from {
+                        filter: hue-rotate(0deg);
+                    }
+
+                    to {
+                        filter: hue-rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1600px) {
+    .header {
+        .container {
+            .nav {
+                &-menu {
+                    &__items {
+                        gap: 15px;
+                    }
+                }
+
+                &-contact {
+                    gap: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:1300px) {
+    .header {
+        .container {
+            .banner {
+                &-title {
+                    width: 590px;
+
+                    p {
+                        @include font(106, 106, 700, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                &-info {
+                    width: 500px;
+                }
+            }
+
+            .nav {
+                &-hamb {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 7px;
+                    flex-direction: column;
+
+                    span {
+                        width: 35px;
+                        border: 2px solid $wh-color;
+                        border-radius: 5px;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+
+                        span {
+                            border: 2px solid $pr-color;
+                        }
+                    }
+                }
+
+                &-menu {
+                    display: none;
+                }
+
+                &-contact {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .about-company {
+        .container {
+            .about-info {
+                .page-name {
+                    padding-top: 80px;
+                }
+
+                .title {
+                    width: 580px;
+                    @include font(54, 75, 700, $wh-color);
+
+                    span {
+                        @include font(100, 75, 900, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                .info {
+                    p {
+                        width: 570px;
+                        margin-top: 40px;
+                        @include font(16, 28, 400, $wh-color);
+                        opacity: 0.8;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .mobileNav {
+        padding-top: 20px;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        position: absolute;
+        width: 40vh;
+        height: 70vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: block;
+        transform: translateY(-1000px);
+
+        .cancel {
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            svg {
+                fill: $wh-color;
+            }
+
+            &:hover {
+                p {
+                    transform: scale(1.1);
+                    color: $pr-color;
+                }
+            }
+
+            &:hover {
+                svg {
+                    transform: scale(1.1);
+                    fill: $pr-color;
+                }
+            }
+        }
+
+        .nav-menu__items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 45px;
+
+            a {
+                @include font(14, 22, 500, $wh-color);
+            }
+        }
+    }
+
+    .hizmatlarimiz {
+        padding-bottom: 70px;
+
+        .container {
+            .top {
+                .title {
+                    padding-top: 30px;
+                    @include font(44, 55, 600, $wh-color);
+                }
+            }
+
+        }
+
+        .swiper.hizmatlarimiz {
+            padding: 30px 0;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    border-radius: 10px;
+
+
+                    .swiper-info {
+                        padding: 10px;
+                        @include font(12, 16, 400, $wh-color);
+                    }
+
+                    .swiper-title {
+                        padding: 10px;
+                        @include font(20, 22, 600, $wh-color);
+                    }
+
+                    button {
+                        margin: 10px;
+                        width: 145px;
+                        height: 30px;
+
+                        a {
+                            @include font(12, 16, 400, $pr-color);
+                        }
+
+                        &:hover {
+                            transform: scale(1.1);
+
+                            a {
+                                @include font(12, 16, 400, $bl-color);
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .flags {
+        .container {
+            .cards {
+                margin-top: 20px;
+
+                .card {
+                    width: 102px;
+                    height: 64px;
+                    border-radius: 10px;
+
+                    p {
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .header {
+        height: auto;
+        .container {
+            .banner {
+                &-title {
+                    width: 590px;
+
+                    p {
+                        @include font(106, 106, 700, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                &-info {
+                    width: 500px;
+                }
+            }
+        }
+    }
+
+    .about-company {
+        .container {
+            .about-info {
+                .page-name {
+                    padding-top: 80px;
+                }
+
+                .title {
+                    width: 580px;
+                    @include font(54, 75, 700, $wh-color);
+
+                    span {
+                        @include font(100, 75, 900, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                .info {
+                    p {
+                        width: 570px;
+                        margin-top: 40px;
+                        @include font(16, 28, 400, $wh-color);
+                        opacity: 0.8;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .hizmatlarimiz {
+        padding-bottom: 70px;
+
+        .container {
+            .top {
+                .title {
+                    padding-top: 30px;
+                    @include font(44, 55, 600, $wh-color);
+                }
+            }
+
+        }
+
+        .swiper.hizmatlarimiz {
+            padding: 30px 0;
+
+            .swiper-wrapper {
+                padding-bottom: 20px;
+
+                .swiper-slide {
+                    border-radius: 10px;
+
+
+                    .swiper-info {
+                        padding: 10px;
+                        @include font(12, 16, 400, $wh-color);
+                    }
+
+                    .swiper-title {
+                        padding: 10px;
+                        @include font(20, 22, 600, $wh-color);
+                    }
+
+                    button {
+                        width: 105px;
+                        height: 30px;
+
+                        a {
+                            @include font(12, 16, 400, $pr-color);
+                        }
+
+                        &:hover {
+                            transform: scale(1.1);
+
+                            a {
+                                @include font(10, 12, 400, $bl-color);
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .flags {
+        .container {
+            .cards {
+                gap: 30px;
+
+                .card {
+                    margin-top: 10px;
+                    width: 82px;
+                    height: 44px;
+                    border-radius: 10px;
+
+                    p {
+                        @include font(12, 23, 400, $wh-color);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .fotogalareya {
+        .container {
+            gap: 10px;
+            flex-wrap: wrap;
+
+            .title {
+                p {
+                    @include font(34, 45, 600, $bl-color);
+                }
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                a {
+                    width: 200px;
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .header {
+        .container {
+            .banner {
+                &-title {
+                    width: 360px;
+
+                    p {
+                        @include font(66, 66, 700, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                &-info {
+                    width: 230px;
+                }
+            }
+        }
+    }
+
+    .about-company {
+        .container {
+            .about-info {
+                .page-name {
+                    padding-top: 40px;
+                    @include font(34, 45, 600, $pr-color);
+
+                }
+
+                .title {
+                    width: 380px;
+                    @include font(34, 45, 600, $wh-color);
+
+                    span {
+                        @include font(65, 75, 900, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                .info {
+                    p {
+                        width: 370px;
+                        margin-top: 30px;
+                        @include font(14, 20, 400, $wh-color);
+                        opacity: 0.8;
+                    }
+                }
+
+
+                .footer {
+                    gap: 10px;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
+    .Biz-bilan-aloqa {
+        .card {
+            width: 400px;
+        }
+    }
+
+    .flags {
+        .container {
+            .title {
+                @include font(34, 45, 600, $wh-color);
+            }
+
+            .cards {
+                margin-top: -5px;
+                gap: 20px;
+
+                .card {
+                    width: 62px;
+                    height: 34px;
+                    border-radius: 10px;
+
+                    p {
+                        @include font(10, 14, 400, $wh-color);
+                    }
+                }
+            }
+
+            .btn {
+                padding-top: 60px;
+            }
+
+        }
+    }
+
+    .hizmatlarimiz {
+        padding-bottom: 50px;
+
+        .container {
+            .top {
+                .next-prew {
+                    position: relative;
+                    right: 10%;
+                }
+
+                .title {
+                    padding-top: 20px;
+                    @include font(34, 45, 600, $wh-color);
+                }
+            }
+
+        }
+
+        .swiper.hizmatlarimiz {
+            padding: 20px 0;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    border-radius: 10px;
+
+
+                    .swiper-info {
+                        padding: 5px;
+                        @include font(12, 16, 400, $wh-color);
+                    }
+
+                    .swiper-title {
+                        padding: 5px;
+                        @include font(14, 16, 600, $wh-color);
+                    }
+
+                    button {
+                        margin: 5px;
+                        width: 125px;
+                        height: 20px;
+                        border-radius: 5px;
+
+                        a {
+                            @include font(10, 12, 400, $pr-color);
+                        }
+
+                        &:hover {
+                            transform: scale(1.1);
+
+                            a {
+                                @include font(10, 12, 400, $bl-color);
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .fotogalareya {
+        .container {
+            gap: 10px;
+            flex-wrap: wrap;
+
+            .title {
+                p {
+                    @include font(34, 45, 600, $bl-color);
+                }
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                a {
+                    width: 130px;
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .footer {
+
+        .end {
+
+            .container {
+
+                .left {
+                    p {
+                        margin-top: 10%;
+                        @include font(10, 12, 400, $wh-color);
+                    }
+                }
+
+                .right {
+
+                    #apple,
+                    #twitter,
+                    #telegram,
+                    #facebook {
+                        font-size: 1.5em;
+
+                        padding: 0px 5px;
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    .yolkira {
+        background: url(../img/yolkira\ bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 130px;
+
+        .container {
+            .title {
+                @include font(34, 45, 600, $wh-color);
+            }
+
+            .info {
+                @include font(14, 20, 400, $wh-color);
+                margin-top: 10px;
+                opacity: 0.9;
+            }
+
+            .login-box {
+                form {
+                    gap: 20px;
+
+                    button {
+                        a {
+                            width: 305px;
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+
+            .login-box .user-box {
+                width: 305px;
+                height: 70px;
+            }
+
+        }
+    }
+
+    .footer {
+
+        .end {
+            .container {
+
+
+                .left {
+                    p {
+                        @include font(10, 14, 400, $wh-color);
+                        opacity: 0.8;
+                    }
+                }
+
+                .right {
+
+                    #apple,
+                    #twitter,
+                    #telegram,
+                    #facebook {
+
+                        padding: 5px 10px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .header {
+        .container {
+            .banner {
+                &-title {
+                    width: 300px;
+
+                    p {
+                        @include font(56, 66, 700, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                &-info {
+                    width: 230px;
+                }
+            }
+        }
+    }
+
+    .about-company {
+        .container {
+            .about-info {
+                .page-name {
+                    padding-top: 30px;
+                    @include font(24, 25, 500, $pr-color);
+
+                }
+
+                .title {
+                    width: 280px;
+                    @include font(20, 24, 500, $wh-color);
+
+                    span {
+                        @include font(45, 55, 900, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                .info {
+                    p {
+                        width: 280px;
+                        margin-top: 20px;
+                        @include font(12, 18, 400, $wh-color);
+                        opacity: 0.8;
+                    }
+                }
+
+
+                .footer {
+                    gap: 10px;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
+    .Biz-bilan-aloqa {
+        .card {
+            margin-top: 40px;
+            width: 350px;
+            height: 500px;
+            margin: 40px auto;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                width: 350px;
+                height: 500px;
+            }
+
+            &::after {
+                content: '';
+                width: 350px;
+                height: 500px;
+            }
+
+            .forma {
+                padding: 20px;
+
+                .title {
+                    @include font(25, 26, 400, $pr-color);
+                }
+
+                .card-banner {
+                    .form {
+                        margin-top: 40px;
+                        gap: 10px;
+
+                        label {
+                            @include font(16, 25, 400, $pr-color);
+                        }
+
+                        input {
+                            width: 250px;
+                            height: 35px;
+                            @include font(18, 20, 400, $wh-color);
+                        }
+                    }
+                }
+
+                .btn {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .hizmatlarimiz {
+        padding-bottom: 50px;
+
+        .container {
+            .top {
+                .title {
+                    padding-top: 20px;
+                    @include font(34, 45, 600, $wh-color);
+                }
+            }
+
+        }
+
+        .swiper.hizmatlarimiz {
+            padding: 20px 0;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    border-radius: 10px;
+
+
+                    .swiper-info {
+                        padding: 5px;
+                        @include font(12, 14, 400, $wh-color);
+                    }
+
+                    .swiper-title {
+                        padding: 5px;
+                        @include font(14, 16, 600, $wh-color);
+                    }
+
+                    button {
+                        margin: 5px;
+                        width: 115px;
+                        height: 20px;
+
+                        p {
+                            @include font(10, 14, 400, $pr-color);
+                        }
+
+                        &:hover {
+                            transform: scale(1.1);
+
+                            p {
+                                @include font(11, 14, 400, $bl-color);
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .fotogalareya {
+        .container {
+            gap: 10px;
+            flex-wrap: wrap;
+
+            .title {
+                p {
+                    @include font(24, 25, 600, $bl-color);
+                }
+            }
+
+            .row {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                a {
+                    width: 100px;
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .flags {
+        .container {
+            .title {
+                @include font(24, 25, 600, $wh-color);
+            }
+
+            .cards {
+                margin-top: -5px;
+                gap: 20px;
+
+                .card {
+                    width: 62px;
+                    height: 34px;
+                    border-radius: 10px;
+
+                    p {
+                        margin-top: 1px;
+                        @include font(10, 14, 400, $wh-color);
+                    }
+                }
+            }
+
+            .btn {
+                padding-top: 60px;
+            }
+
+        }
+    }
+
+    .yolkira {
+        .container {
+            .login-box {
+                form {
+
+                    button {
+                        a {
+                            width: 205px;
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .footer {
+
+        .end {
+
+            .container {
+
+                .left {
+                    p {
+                        margin-top: 10%;
+                        @include font(10, 12, 400, $wh-color);
+                    }
+                }
+
+                .right {
+
+                    #apple,
+                    #twitter,
+                    #telegram,
+                    #facebook {
+                        font-size: 1em;
+
+                        padding: 0px 5px;
+
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:360px) {
+    .header {
+        .container {
+            .banner {
+                &-title {
+                    width: 250px;
+
+                    p {
+                        @include font(46, 56, 600, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                &-info {
+                    width: 250px;
+                }
+            }
+        }
+    }
+
+    .about-company {
+        .container {
+            .about-info {
+                .page-name {
+                    padding-top: 30px;
+                    @include font(24, 25, 500, $pr-color);
+                }
+
+                .title {
+                    width: 250px;
+                    @include font(20, 24, 500, $wh-color);
+
+                    span {
+                        @include font(45, 55, 900, rgba(255, 255, 255, 0));
+                    }
+                }
+
+                .info {
+                    p {
+                        width: 260px;
+                        margin-top: 20px;
+                        @include font(12, 18, 400, $wh-color);
+                        opacity: 0.8;
+                    }
+                }
+
+
+                .footer {
+                    gap: 10px;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
+    .Biz-bilan-aloqa {
+        .card {
+            margin-top: 40px;
+            width: 250px;
+            height: 400px;
+            margin: 20px auto;
+
+            &::before {
+                content: '';
+                width: 250px;
+                height: 400px;
+            }
+
+            &::after {
+                content: '';
+                width: 250px;
+                height: 400px;
+            }
+
+            .forma {
+                padding: 10px;
+
+                .title {
+                    @include font(23, 26, 400, $pr-color);
+                }
+
+                .card-banner {
+                    .form {
+                        margin-top: 20px;
+                        gap: 10px;
+
+                        label {
+                            @include font(16, 25, 400, $pr-color);
+                        }
+
+                        input {
+                            width: 250px;
+                            height: 35px;
+                            @include font(14, 20, 400, $wh-color);
+                        }
+                    }
+                }
+
+                .btn {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .hizmatlarimiz {
+        padding-bottom: 50px;
+
+        .container {
+            .top {
+                .title {
+                    padding-top: 20px;
+                    @include font(24, 25, 600, $wh-color);
+                }
+                .next-prew {
+                    position: relative;
+                    right: 5%;
+    
+                    .swiper-button-next {
+                        right: 0;
+                        left: 0px;
+                        width: 30px;
+                        height: 30px;
+                     
+    
+                    }
+    
+                    .swiper-button-prev {
+                        left: -40px;
+                        width: 30px;
+                        height: 30px;
+                    } 
+                }
+            }
+
+        }
+
+        
+    }
+
+    .fotogalareya {
+        .container {
+            gap: 10px;
+            flex-wrap: wrap;
+
+            .title {
+                p {
+                    @include font(24, 25, 600, $bl-color);
+                }
+            }
+
+            .row {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                a {
+                    width: 90px;
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .yolkira {
+        .container {
+        
+            .login-box {
+                form {
+                    gap: 20px;
+
+                    button {
+                        a {
+                            width: 205px;
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+
+            .login-box .user-box {
+                width: 225px;
+                height: 70px;
+            }
+
+        }
+    }
+
+    .footer {
+        .container {
+            .center {
+                iframe {
+                    border-radius: 5%;
+                    width: 275px;
+                }
+            }
+        }
+    
+        .end {
+           
+            .container {
+            
+                .left {
+                    p {
+                        @include font(10, 12, 400, $wh-color);
+                    }
+                }
+    
+                .right {
+    
+                    #apple,
+                    #twitter,
+                    #telegram,
+                    #facebook {
+                        font-size: 1em;
+                        padding: 0px 5px;
+                    }
+                }
+            }
+        }
+    }
+
+}
